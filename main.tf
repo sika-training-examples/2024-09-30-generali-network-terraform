@@ -13,6 +13,7 @@ resource "azurerm_virtual_network" "main" {
 resource "azurerm_subnet" "main" {
   for_each = {
     "ondrejsika" = ["10.0.1.0/24"]
+    "foo"        = ["10.0.2.0/24"]
   }
 
   name                 = each.key
