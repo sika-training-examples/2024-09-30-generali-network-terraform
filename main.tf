@@ -16,7 +16,7 @@ resource "azurerm_subnet" "main" {
   }
 
   name                 = each.key
-  resource_group_name  = azurerm_resource_group.example.name
+  resource_group_name  = azurerm_resource_group.main.name
   virtual_network_name = "example-generali-network"
   address_prefixes     = each.value
 }
